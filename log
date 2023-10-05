@@ -109,3 +109,20 @@ Thu 05 Oct 2023 04:51:58 PM UTC:
  tests:  1|5
 total_score: 5/70
 be5bcf1
+Thu 05 Oct 2023 04:53:28 PM UTC: 
+ sudoku.c | 25 ++++++++++++++++++++++++-
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:79:9: error: unknown type name ‘node’; did you mean ‘Node’?
+   79 |         node* list_node = _createNode(new_node);
+      |         ^~~~
+      |         Node
+sudoku.c:79:27: error: implicit declaration of function ‘_createNode’; did you mean ‘createNode’? [-Werror=implicit-function-declaration]
+   79 |         node* list_node = _createNode(new_node);
+      |                           ^~~~~~~~~~~
+      |                           createNode
+sudoku.c:79:27: error: initialization of ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+cc1: all warnings being treated as errors
+Compilation failed
+9d7394f
