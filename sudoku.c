@@ -64,8 +64,6 @@ List* get_adj_nodes(Node* n){
         }
         if (!is_full) break;
     }
-
-    // Si la matriz ya está llena, retornar lista vacía
     if (is_full) {
         return list;
     }
@@ -76,7 +74,7 @@ List* get_adj_nodes(Node* n){
         new_node->sudo[0][2] = num;
 
         // Crear un nodo de tipo "node" para almacenar el nuevo nodo
-        Node* list_node = createNode(new_node);
+        //Node* list_node = createNode(new_node);
 
         // Agregar el nodo a la lista
         pushBack(list, list_node);
