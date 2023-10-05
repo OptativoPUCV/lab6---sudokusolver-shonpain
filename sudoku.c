@@ -9,12 +9,6 @@ typedef struct{
 
 Node* createNode(){
   Node* n=(Node*) malloc(sizeof(Node));
-    for (int i = 0; i < 9; i++) {
-        for (int j = 0; j < 9; j++) {
-            n->sudo[i][j] = 0;
-        }
-    }
-
   return n;
 }
 
@@ -62,7 +56,7 @@ List* get_adj_nodes(Node* n){
         Node* nuevoNodo = copy(n);
         nuevoNodo->sudo[0][2] = num;
         
-        Node* listNode = createNode(nuevoNodo);
+        //Node* listNode = createNode(nuevoNodo);
         pushBack(list, listNode);
     }
 

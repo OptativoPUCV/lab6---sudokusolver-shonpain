@@ -86,3 +86,14 @@ Thu 05 Oct 2023 04:46:52 PM UTC:
  tests:  0|5
 total_score: 0/70
 f26e547
+Thu 05 Oct 2023 04:47:49 PM UTC: 
+ sudoku.c | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:24: error: ‘listNode’ undeclared (first use in this function)
+   60 |         pushBack(list, listNode);
+      |                        ^~~~~~~~
+sudoku.c:60:24: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6765ccd
