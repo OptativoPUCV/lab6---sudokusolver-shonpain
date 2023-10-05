@@ -2,3 +2,14 @@ Thu 05 Oct 2023 03:28:54 AM UTC:
  tests:  0|5
 total_score: 0/70
 092af31
+Thu 05 Oct 2023 04:33:23 PM UTC: 
+ sudoku.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:58:9: error: implicit declaration of function ‘addNodeToList’ [-Werror=implicit-function-declaration]
+   58 |         addNodeToList(list, new_node);
+      |         ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+03a3f89
