@@ -56,7 +56,7 @@ List* get_adj_nodes(Node* n){
         Node* nuevoNodo = copy(n);
         nuevoNodo->sudo[0][2] = num;
         
-        //Node* listNode = createNode(nuevoNodo);
+        Node* listNode = createNode(nuevoNodo);
         pushBack(list, listNode);
     }
 
