@@ -77,7 +77,7 @@ List* get_adj_nodes(Node* n){
         //Node* list_node = createNode(new_node);
 
         // Agregar el nodo a la lista
-        pushBack(list, list_node);
+        pushBack(list, print_node);
     }
 
     return list;

@@ -144,3 +144,9 @@ sudoku.c:80:24: error: ‘list_node’ undeclared (first use in this function); 
 sudoku.c:80:24: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 a0e7502
+Thu 05 Oct 2023 04:54:48 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+43b2520
