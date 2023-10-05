@@ -43,10 +43,62 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int is_valid(Node* n) {
+    int used[10] = {0};  // Arreglo para marcar los números usados (inicializado en 0)
 
-    return 1;
+    // Validar filas
+    for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++) {
+            int num = n->sudo[i][j];
+            if (num != 0) {
+                if (used[num] == 1)
+                    return 0;  // Número repetido en la fila
+                used[num] = 1;
+            }
+        }
+        // Reinicializar el arreglo para la siguiente fila
+        for (int k = 0; k < 10; k++)
+            used[k] = 0;
+    }
+
+    // Validar columnas
+    for (int j = 0; j < 9; j++) {
+        for (int i = 0; i < 9; i++) {
+            int num = n->sudo[i][j];
+            if (num != 0) {
+                if (used[num] == 1)
+                    return 0;  // Número repetido en la columna
+                used[num] = 1;
+            }
+        }
+        // Reinicializar el arreglo para la siguiente columna
+        for (int k = 0; k < 10; k++)
+            used[k] = 0;
+    }
+
+    // Validar submatrices 3x3
+    for (int k = 0; k < 9; k++) {
+        int start_row = 3 * (k / 3);
+        int start_col = 3 * (k % 3);
+        
+        for (int p = 0; p < 9; p++) {
+            int i = start_row + (p / 3);
+            int j = start_col + (p % 3);
+            int num = n->sudo[i][j];
+            if (num != 0) {
+                if (used[num] == 1)
+                    return 0;  // Número repetido en la submatriz
+                used[num] = 1;
+            }
+        }
+        // Reinicializar el arreglo para la siguiente submatriz
+        for (int m = 0; m < 10; m++)
+            used[m] = 0;
+    }
+
+    return 1;  // El estado es válido
 }
+
 
 
 
