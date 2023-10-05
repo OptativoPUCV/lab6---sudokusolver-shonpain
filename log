@@ -51,3 +51,14 @@ sudoku.c:72:9: error: invalid use of incomplete typedef ‘List’
       |         ^~
 Compilation failed
 4ff8c52
+Thu 05 Oct 2023 04:39:16 PM UTC: 
+ sudoku.c | 23 -----------------------
+ 1 file changed, 23 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:59:9: error: implicit declaration of function ‘addNodeToList’ [-Werror=implicit-function-declaration]
+   59 |         addNodeToList(list, new_node);
+      |         ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2ad1168

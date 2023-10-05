@@ -49,29 +49,6 @@ int is_valid(Node* n){
 }
 
 
-void addNodeToList(List* list, Node* node) {
-    node* new_node = (node*)malloc(sizeof(node));
-    if (new_node == NULL) {
-        // Manejar el error si no se pudo asignar memoria
-        exit(EXIT_FAILURE);
-    }
-
-    new_node->data = node;
-    new_node->next = NULL;
-
-    if (list->size == 0) {
-        list->first = new_node;
-        list->last = new_node;
-        list->current = new_node;
-    } else {
-        list->last->next = new_node;
-        new_node->prev = list->last;
-        list->last = new_node;
-    }
-
-    list->size++;
-}
-
 
 List* get_adj_nodes(Node* n){
     List* list = createList();
