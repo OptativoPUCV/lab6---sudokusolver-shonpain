@@ -54,25 +54,24 @@ List* get_adj_nodes(Node* n){
         List* list = createList();
 
     // Verificar si la matriz ya está llena
-    int is_full = 1;
+    int estaLlena = 1;
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
             if (n->sudo[i][j] == 0) {
-                is_full = 0;
+                estaLlena = 0;
                 break;
             }
         }
-        if (!is_full) break;
+        if (!estaLlena) break;
     }
-    if (is_full) {
+    if (estaLlena) {
         return list;
     }
 
-    // Generar nodos adyacentes cambiando la primera casilla vacía
     for (int num = 1; num <= 9; num++) {
-        Node* new_node = copy(n);
-        new_node->sudo[0][2] = num;
-        pushBack(list, new_node);
+        Node* nuevoNodo = copy(n);
+        nuevoNodo->sudo[0][2] = num;
+        pushBack(list, nuevoNodo);
     }
 
     return list;
