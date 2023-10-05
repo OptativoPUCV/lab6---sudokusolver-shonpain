@@ -76,7 +76,7 @@ List* get_adj_nodes(Node* n){
         new_node->sudo[0][2] = num;
 
         // Crear un nodo de tipo "node" para almacenar el nuevo nodo
-        node* list_node = _createNode(new_node);
+        Node* list_node = createNode(new_node);
 
         // Agregar el nodo a la lista
         pushBack(list, list_node);

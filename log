@@ -126,3 +126,9 @@ sudoku.c:79:27: error: initialization of ‘int *’ from ‘int’ makes pointe
 cc1: all warnings being treated as errors
 Compilation failed
 9d7394f
+Thu 05 Oct 2023 04:53:53 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+466d65a
