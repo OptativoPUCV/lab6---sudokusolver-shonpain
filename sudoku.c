@@ -72,12 +72,7 @@ List* get_adj_nodes(Node* n){
     for (int num = 1; num <= 9; num++) {
         Node* new_node = copy(n);
         new_node->sudo[0][2] = num;
-
-        // Crear un nodo de tipo "node" para almacenar el nuevo nodo
-        //Node* list_node = createNode(new_node);
-
-        // Agregar el nodo a la lista
-        pushBack(list, print_node);
+        pushBack(list, new_node);
     }
 
     return list;
