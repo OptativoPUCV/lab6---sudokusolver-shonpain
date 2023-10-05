@@ -13,3 +13,41 @@ sudoku.c:58:9: error: implicit declaration of function ‘addNodeToList’ [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 03a3f89
+Thu 05 Oct 2023 04:38:53 PM UTC: 
+ sudoku.c | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘addNodeToList’:
+sudoku.c:53:11: error: ‘new_node’ undeclared (first use in this function)
+   53 |     node* new_node = (node*)malloc(sizeof(node));
+      |           ^~~~~~~~
+sudoku.c:53:11: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:53:28: error: expected expression before ‘)’ token
+   53 |     node* new_node = (node*)malloc(sizeof(node));
+      |                            ^
+sudoku.c:62:13: error: invalid use of incomplete typedef ‘List’
+   62 |     if (list->size == 0) {
+      |             ^~
+sudoku.c:63:13: error: invalid use of incomplete typedef ‘List’
+   63 |         list->first = new_node;
+      |             ^~
+sudoku.c:64:13: error: invalid use of incomplete typedef ‘List’
+   64 |         list->last = new_node;
+      |             ^~
+sudoku.c:65:13: error: invalid use of incomplete typedef ‘List’
+   65 |         list->current = new_node;
+      |             ^~
+sudoku.c:67:13: error: invalid use of incomplete typedef ‘List’
+   67 |         list->last->next = new_node;
+      |             ^~
+sudoku.c:68:30: error: invalid use of incomplete typedef ‘List’
+   68 |         new_node->prev = list->last;
+      |                              ^~
+sudoku.c:69:13: error: invalid use of incomplete typedef ‘List’
+   69 |         list->last = new_node;
+      |             ^~
+sudoku.c:72:9: error: invalid use of incomplete typedef ‘List’
+   72 |     list->size++;
+      |         ^~
+Compilation failed
+4ff8c52
