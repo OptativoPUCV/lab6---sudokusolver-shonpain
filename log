@@ -174,3 +174,33 @@ Mon 09 Oct 2023 02:58:44 AM UTC:
  tests:  6|2
 total_score: 45/70
 3dd1341
+Mon 09 Oct 2023 03:01:49 AM UTC: 
+ sudoku.c | 28 +++++++++++++++++++++++++++-
+ 1 file changed, 27 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:148:9: error: implicit declaration of function ‘print_sudo’; did you mean ‘print_node’? [-Werror=implicit-function-declaration]
+  148 |         print_sudo(initial->sudo);  // Suponiendo que tienes una función para imprimir la matriz
+      |         ^~~~~~~~~~
+      |         print_node
+sudoku.c:157:38: error: invalid use of incomplete typedef ‘List’
+  157 |         for (int i = 0; i < adj_nodes->size; i++) {
+      |                                      ^~
+sudoku.c:158:13: error: unknown type name ‘node’; did you mean ‘Node’?
+  158 |             node* adj_node = adj_nodes->nodes[i]->data;
+      |             ^~~~
+      |             Node
+sudoku.c:158:39: error: invalid use of incomplete typedef ‘List’
+  158 |             node* adj_node = adj_nodes->nodes[i]->data;
+      |                                       ^~
+sudoku.c:159:32: error: passing argument 1 of ‘DFS’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  159 |             Node* result = DFS(adj_node, cont);
+      |                                ^~~~~~~~
+      |                                |
+      |                                int *
+sudoku.c:144:17: note: expected ‘Node *’ but argument is of type ‘int *’
+  144 | Node* DFS(Node* initial, int* cont){
+      |           ~~~~~~^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+278423d
