@@ -142,33 +142,7 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-    if (is_final(initial)) {
-        // Se alcanzó un estado final, hacer algo con el nodo final
-        printf("Se alcanzó un estado final:\n");
-        print_sudo(initial->sudo);  // Suponiendo que tienes una función para imprimir la matriz
-        printf("\n");
-        (*cont)++;  // Incrementar el contador de estados finales encontrados
-        return initial;
-    } else {
-        // Generar nodos adyacentes y explorar recursivamente
-        List* adj_nodes = get_adj_nodes(initial);
-        Node* final_node = NULL;  // Para almacenar el nodo final encontrado
-
-        for (int i = 0; i < adj_nodes->size; i++) {
-            node* adj_node = adj_nodes->nodes[i]->data;
-            Node* result = DFS(adj_node, cont);
-            if (result != NULL) {
-                final_node = result;  // Guardar el nodo final encontrado
-                // Puedes detener la búsqueda aquí si solo quieres encontrar el primer nodo final
-                // return final_node;
-            }
-        }
-        // Liberar memoria de la lista de nodos adyacentes
-        clean(adj_nodes);
-        free(adj_nodes);
-
-        return final_node;  // Devolver el nodo final encontrado (o NULL si no se encontró ninguno)
-    }
+  return NULL;
 }
 
 

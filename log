@@ -204,3 +204,9 @@ sudoku.c:144:17: note: expected ‘Node *’ but argument is of type ‘int *’
 cc1: all warnings being treated as errors
 Compilation failed
 278423d
+Mon 09 Oct 2023 03:01:56 AM UTC: 
+ sudoku.c | 28 +---------------------------
+ 1 file changed, 1 insertion(+), 27 deletions(-)
+ tests:  6|2
+total_score: 45/70
+fe9fdcc
